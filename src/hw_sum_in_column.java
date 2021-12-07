@@ -2,7 +2,6 @@ import java.sql.Array;
 import java.util.Scanner;
 
 public class hw_sum_in_column {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter row number of array: ");
@@ -30,7 +29,6 @@ public class hw_sum_in_column {
     }
 
     public static void sum(int[][] array) {
-        System.out.println("array.lenth "+array.length);
         System.out.print("Enter the column that you want to sum: ");
         Scanner scanner = new Scanner(System.in);
         int x = scanner.nextInt();
@@ -38,6 +36,6 @@ public class hw_sum_in_column {
         for (int i = 0; i < array.length; i++) {
             sum = sum + array[i][x];
         }
-        System.out.println("sum = " + sum);
+        System.out.println("Sum of culumn " + x + " is: " + sum);
     }
 }
