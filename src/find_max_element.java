@@ -23,5 +23,6 @@ public class find_max_element {
         }
         System.out.println();
         System.out.println("max is: " + max + " at position " + (k - 1));
+        System.out.println("max is: " + max + " at position " + (k - 1));
     }
 }
