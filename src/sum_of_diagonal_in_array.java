@@ -1,7 +1,6 @@
-import java.sql.Array;
 import java.util.Scanner;
 
-public class hw_sum_in_column {
+public class sum_of_diagonal_in_array {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter row number of array: ");
@@ -17,7 +16,7 @@ public class hw_sum_in_column {
         }
         System.out.println("The array is: ");
         display(array);
-        sum(array);
+        sumDiagonal(array);
     }
     public static void display(int[][] array) {
         for (int i = 0; i < array.length; i++) {
@@ -28,14 +27,16 @@ public class hw_sum_in_column {
         }
     }
 
-    public static void sum(int[][] array) {
-        System.out.print("Enter the column that you want to sum: ");
-        Scanner scanner = new Scanner(System.in);
-        int x = scanner.nextInt();
+    public static void sumDiagonal(int[][] array) {
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
-            sum = sum + array[i][x];
+            for (int j = 0; j < array[i].length; j++) {
+                if (i == j) {
+                    sum = sum + array[i][j];
+                }
+            }
+
         }
-        System.out.println("Sum of culumn " + x + " is: " + sum);
+        System.out.println("Sum of Diagonal is: " + sum);
     }
 }
